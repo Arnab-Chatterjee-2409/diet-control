@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/Users/Arnab/Downloads/ledger_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#123C49">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiTGVkZ2VyIOKAlCBGYXQtTG9zcyBDb2FjaCIsInNob3J0X25hbWUiOiJMZWRnZXIiLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjRUZFRUU2IiwidGhlbWVfY29sb3IiOiIjMTIzQzQ5IiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBSUFBQUI3R2tPdEFBQWFoRWxFUVZSNG5PM2RhNnhsNTEzZjhkLy9XV3Z2c3kvbk1uUE96SGc4am1OQzdGeWNGT3dFdXdhN0tWZ29ZTDlJMjBDaGw2aW9sTjdVVXFrVlVLVVNGUWkxdktpS3FsWnFKYVJHVllBM1ZFU2xMMHhUUlFraWNiR013UzRrSm9uZFF1eGM3TG1jT2RlOXo5NTdyZWZmRjN0c1JZcnh6SFRPMlpmMS8zNWUrZDE1bnUxem51K3puclgyR3R0ODVERUJBT0pKOHg0QUFHQStDQUFBQkVVQUFDQW9BZ0FBUVJFQUFBaUtBQUJBVUFRQUFJSWlBQUFRRkFFQWdLQUlBQUFFUlFBQUlDZ0NBQUJCRVFBQUNJb0FBRUJRQkFBQWdpSUFBQkFVQVFDQW9BZ0FBQVJGQUFBZ0tBSUFBRUVSQUFBSWlnQUFRRkFFQUFDQ0lnQUFFQlFCQUlDZ0NBQUFCRVVBQUNBb0FnQUFRUkVBQUFpS0FBQkFVQVFBQUlJaUFBQVFGQUVBZ0tBSUFBQUVSUUFBSUNnQ0FBQkJFUUFBQ0lvQUFFQlFCQUFBZ2lJQUFCQVVBUUNBb0FnQUFBUkZBQUFnS0FJQUFFRVJBQUFJaWdBQVFGQUVBQUNDSWdBQUVCUUJBSUNnQ0FBQUJFVUFBQ0FvQWdBQVFSRUFBQWlLQUFCQVVBUUFBSUlpQUFBUUZBRUFnS0FJQUFBRVJRQUFJQ2dDQUFCQkVRQUFDSW9BQUVCUUJBQUFnaUlBQUJBVUFRQ0FvQWdBQUFSVnpuc0FBQmFGemU5SCsveCtkR1FFQUlndVNTYXZaZFg4R2xCS0ptVktNRnNFQUFocWV2NWJTMFBaU01XcTZsWGxMSnQ5QTF6YVZpR3BJeS9raFR6TEtNRU1FQUFnbkNTNU5KQmxXVi81UGgvZXBmRmRtcnhUbzVITVpyc0xOMmtpZTByOW9leHA2KzhvN2F2b0s1ZFNudVU0UXJMTlJ4NmI5eGdBekU0cFAxUnk2WDRmdmt1ait6VThyYnF2ZXFRMG5zZjJYNUpKWGVVc0hTaTlvSlUvVnVjWjY3MmljbFU1a1lHVFJBQ0FLS2FMKzQ2SyszM3d1UGJ2MVZGTGZxUlVTN1hNNUdsK1IvQlpNcW1RMnZLVy9LTEt6Nm4vaEswUGxWWlYxL084UDkxa0hBRUJJU1JwTEd2SmY5UjNmbEI3WGVWRHBhRXNYVnQ1cjYzODgxcG9DMG1TUzBQWlFLbXYvTVBhdmNkSHY2bjE1NjI3cXRxNUszQUMrQjRBMEh4SkdzazZ5bi9Yci94MVhYWHBVQ2xKeFZ3Zi9YeERTU3JrMDl2Qzc5Ym9wM1RwQVI4TWxIenhodG9BWEFFQURWZkk5MVc4M3djL29lMk84bVdWaFh6eEY5TlNmaWdycEovVTVXZTgrOHUyTmIxWTRUcmdHSEVGQURSWklUOVV1dGVQL3JFdXQrVWpXYkU4UzJnaFRTOVd2bHVEditkWGpwUm0vSVJTNHhFQW9MRk1xcVZTK3N2YUxhU3hiT24rNEUxSzhsMFYzNlhCKzMxd29HS0pBcmI0bHU3M0FjQ044eU1WLzlBdjM2dWpRNlVsWFRwTnN1bEVkUGs5Zm5Td3RCTlpRQVFBYUtZa0hTazk0SVAzYWVrM3pxOWZ5bnhJdTExNVBhZnZLelFQQVFBYXlLUktPcVg4dDNSbDBvaWo4MEorb1BTZE9ucmM5dzZVMHZMUGFCRVFBS0NCVEQ1UytsN2YzMUNlTkdXL1hNajNsUjdSd1cycUdqT3ArU0lBUU5PWVZNdjZ5Zy9yY05TZ3piSkpsZXljNmdkOGNOaWdlYzBSQVFDYXh1UmoyVDArMmxCZE5XdW5QSDF6M0x0MTFKUHpqcUJiUndDQXBwbnVsTy9Wc0htcjVMVzJhWFNxY1cyYkN3SUFOTXAwajN4YTlmczBiTjQ1eWJSdHE4b1ArdUd3Y2JPYlBRSUFOSTFMYmZsS2N4ZkhKSFdWMmY3Zk9nSUFORXFTSHlrOTVJZW5WVGZ5VVpra0h5ZzlwTUZtUXljNFN3UUFhQnFYV3N2d3VyZGIwZmdKemdZQkFCcW9zYWMvcjJuOEJHZURBQUJBVUFRQUFJSWlBQUFRRkFFQWdLQUlBQUFFUlFBQUlDZ0NBQUJCRVFBQUNJb0FBRUJRQkFBQWdpSUFBQkFVQVFDQW9BZ0FBQVJGQUFBZ0tBSUFBRUVSQUFBSWlnQUFRRkFFQUFDQ0lnQUFFQlFCQUlDZ0NBQUFCRVVBQUNBb0FnQUFRUkVBQUFpS0FBQkFVQVFBQUlJaUFBQVFGQUVBZ0tBSUFBQUVSUUFBSUNnQ0FBQkJFUUFBQ0lvQUFFQlFCQUFBZ2lJQUFCQVVBUUNBb0FnQUFBUkZBQUFnS0FJQUFFRVJBQUFJaWdBQVFGQUVBQUNDSWdBQUVCUUJBSUNnQ0FBQUJFVUFBQ0FvQWdBQVFaWHpIZ0J3cTJ4K1A5cm45Nk9CVzBjQXNLeVNLWmxYMlNvM2s4OXlMVGJKSlpOYVNaSm5OMHFBWlVRQXNHU1N5YVFxYTFEYlVWV3N0K3YxZGwyNzJjeTM0KzUyYVZoSTZwVmVKay9KYzZZRVdDWUVBRXNqbVNRZFRsTHRXbS9YRDUwYnZ2M1UrTzVUNC9lZU9SclZOdU9ESUpNbTJUN3pjdit3U3IvejFmNlZZWEU0S3RmYWRTdXBKZ0pZRWdRQXk2Rk1makJPTGoxMCsrRjNuRG42N2d1RHJVNjkxcTZQcWpUTzFrNTV4dmNDWERMNTMzejNUbmI5NkR0MnZuQ2w4OXlsN3VlKzF2dmFRV3U5blFzakExZ0NCQUNMTHBteTY5S2dmT2oyd1krOGMvZStzOE4yNFlPSjFXNlhoMlV5VHlhZno1MWcyeGtseWN1a0I4NFBINzR3K1BEZHUvL3pLMnUvL3VXTi9YRmFhOWUxei9IK05IQjlCQUFMclRBZDFkWXU4ay84dWUwZnVtZXYzNnIzeDJsUXBXUnVVcG11YmJQbnRkQVc1cExjTlpqWW9kSmFPLy80ZTYrK1ordm8xNzU0NnRtTDNmVjI3ZHdmeGdMamV3QllYTWswckt4YjVwLytyc3QvL3p1MlhiNDNUc2xVMk1KdHJhZWpxbDJYQnNWOVo0Lys5Y092ZnVDT3c4Tkp5bk82TmdGdUJBSEFnaXJNOThicGdmT0RqMzN3cXcrZUg3d3lLRTBxRm5zMW5WNlU3RS9TSk90ZlBuVHhaeCs2bUtWWjM1MEFiaGdCd0NJcXpQY242ZjV6dzU5OTZHS245R0ZsNWZJY3BSVG1MdTFQMHFOM0h2N3pCeTRkVldiTE0zaUVRZ0N3Y0V5cTNGckpQL0t1bmRKMFZOdUNiL3kvbFVuSmZQdW9lUGpDNE9FTGc3MXhVZEFBTEI0Q2dBWGt3OG8rK3VDbCs4OE45eWRwaWZiKzM4d2tNeitxN0tNUFhucmZ1ZUhlT05FQUxCb0NnTVdTVElNNi9ZVTdtckJ4ZnYxUzVtKzhhNmZYOHRwbi9XMDE0TTBSQUN3UWt5WlpXeXYxVDk1M2VWdzM0ZWg4ZWl2N3o1OGYvc2c3ZHZmR0tTMy9qTkFrQkFBTFpIcG04dmpiOWpjNzlUZzNaTDljSk44ZHB3L2V0WC9INnFReGswSXpFQUFzaXVtQnlWbzdmLzlkQjBkVmN6YkwwN2NHWGVoWGo5d3hPSmcwWjE1b0FBS0FSV0htbzhyZXN6WGFYS21yWmgyWG16VE9kdC9aWWIvTXZDTUlpNE1BWUZHWVZFMVh5VmJUVnNuWDI3YlZiVnJic05RSUFCYkNkSTk4cGx0OXo0VUducE9ZTkhGYmI5Y2ZlTXZob0hHencvSWlBRmdVTHJVTDc1U05YUnlUcVY5bXR2OVlIQVFBQ3lHWkR5ZnAwVHNQdHpwVkl4K1ZTZWFEU2ZxK093L1BkcHM1UVN3akFvQkY0VktyOE5UY3BYRTZRZForTEE0Q2dBVXkwMy9aZlI0YVAwRXNGd0lBQUVFUkFBQUlpZ0FBUUZBRUFBQ0NJZ0FBRUJRQkFJQ2dDQUFBQkVVQUFDQW9BZ0FBUVJFQUFBaUtBQUJBVUFRQUFJSWlBQUFRRkFFQWdLQUlBQUFFUlFBQUlDZ0NBQUJCRVFBQUNJb0FBRUJRQkFBQWdpSUFBQkFVQVFDQW9BZ0FBQVJGQUFBZ0tBSUFBRUVSQUFBSWlnQUFRRkFFQUFDQ0lnQUFFQlFCQUlDZ0NBQUFCRVVBQUNBb0FnQUFRUkVBQUFpS0FBQkFVQVFBQUlJaUFBQVFGQUVBZ0tBSUFBQUVSUUFBSUNnQ0FBQkJFUUFBQ0lvQUFFQlFCQUFBZ2lJQUFCQVVBUUNBb0FnQUFBUkZBQUFncUhMZUF3akpUTzV5bDBrKys1OHVXWklrbi8zUEJyQkFDTURNbUV4eTk1emwyWXJDaW5JZXk3OGs1Y2xFa3FVa3MyczFBaEFQQVpnQms5eHpMYm1sb2x4ZEwxYTZSYWRiZEZmZHMyU3pIa3YyeWY1VjFmVmtmOGVyaWRlVkZZVXNrUUVnR2dKd3dzeThyaVV2K3h0bGY3WHNiMWlyWmFtUVo4L1owc3cvZjVkS3JXeWRsM3Q3NjdaNmNGQU5EcXFEblR3ZVdWRnlOUUNFUWdCT2xsZmpzci9SM2p4WDl0YVV6SE9XdTFjVG1VbHpPb1YzZVRXUkpMTnlkYjFjTzVVM3owNTJ0OGZicjNwZFcxSFNBQ0FJQW5BeXpKUnJXVm81YzZHOWVjNkt3dXRhbFY5YjkyMjJ4ejV2T0R4Smt1ZGFYbHNxVnM3Y1huVDc0eXV2VklNREdnQUV3V09nSnlQWFNrWG45cmV1bkx0RGtsZVZ0QURyL2h1dzZhaThtcFM5dGU1YjdtNnRibmhkelh0VUFHYUJLNERqWnVaVjFWcmI2SngvcTFMaGsvRzFKMjBXbkpuWGxjeTZkM3g3dWI5ejlJMnZMTUdZQWR3YXJnQ09sWm5YVmRsZjdWeDRtMUpTcnBkcEdaMWVDdFJWYStOMDUvYTdsT3Q1RHdqQXlTSUF4OHJkek5wYjU4MU1PUy9UNnY4Nk02OG01ZHFwY25YRDY2VUtHSUNiUkFDT1ZhNDd0MzliMlYrZkhxZk1lelQvMzB5NTdseDRXOWxmWGZLSkFIZ3pCT0Q0NUxwY08xV3VuV3JDb3ZuNnBVemlDMkpBWXhHQVkrSnVaV3ZsdGp2bGVkNURPUTdUbXhtckcrM1R0eldoWndEZUNBRTREbWJ1dWJXeGxjcFN1UkVCMExVR3RFNXRwdlpLY3lZRjRKc1FnT09Rc3hWRmEyUExsL1RHNzU4bDU5UmFLVmMzZkxrZVp3SndZd2pBTFROenowV25iMlVUdjBEclh2YldMQlVObkJvUUhnRTREazFkSmMzY2MrcXRXdGxxMnRRQUVJQmprSE5xdGNxMWhwNlQ1SnhTMFZvNzFjelpBYkVSZ09OZ1NhbVk5eUJPakprU3Z5ZEFBL0dIZld2TVBOZXR0ZE9wYkRYelVabnBCTmMzVTZ2ZHpBa0NnUkdBNDlENHM1SEdUeEFJaVFBQVFGQUVBQUNDSWdBQUVCUUJBSUNnQ0FBQUJFVUFBQ0FvQWdBQVFSRUFBQWlLQUFCQVVBUUFBSUlpQUFBUUZBRUFnS0FJQUFBRVJRQUFJQ2dDQUFCQkVRQUFDSW9BQUVCUUJBQUFnaUlBQUJBVUFRQ0FvQWdBQUFSRkFBQWdLQUlBQUVFUkFBQUlpZ0FBUUZBRUFBQ0NJZ0FBRUJRQkFJQ2dDQUFBQkVVQUFDQW9BZ0FBUVJFQUFBaUtBQUJBVUFRQUFJSWlBQUFRRkFFQWdLQUlBQUFFUlFBQUlDZ0NBQUJCRVFBQUNJb0FBRUJRQkFBQWdpSUFBQkFVQVFDQW9BZ0FBQVJGQUFBZ0tBSUFBRUVSQUFBSWlnQUFRRkFFQUFDQ0lnQUFFQlFCQUlDZ0NBQUFCRVVBQUNBb0FnQUFRUkVBQUFpS0FBQkFVQVFBQUlJaUFBQVFGQUVBZ0tBSUFBQUVSUUFBSUNnQ0FBQkJFUUFBQ0lvQUFFQlFCQUFBZ2lJQUFCQVVBUUNBb0FnQUFBUkZBQUFnS0FJQUFFRVJBQUFJaWdBQVFGQUVBQUNDSWdBQUVCUUJBSUNnQ0FBQUJFVUFBQ0FvQWdBQVFSRUFBQWlLQUFCQVVBUUFBSUlpQUFBUUZBRUFnS0FJQUFBRVJRQUFJQ2dDQUFCQkVRQUFDSW9BQUVCUUJBQUFnaUlBQUJBVUFRQ0FvQWdBQUFSRkFBQWdLQUlBQUVFUkFBQUlpZ0FBUUZBRUFBQ0NJZ0FBRUJRQkFJQ2dDQUFBQkVVQUFDQW9BZ0FBUVJFQUFBaUtBQUJBVUFRQUFJSWlBQUFRRkFFQWdLQUlBQUFFUlFBQUlDZ0NBQUJCRVFBQUNJb0FBRUJRQkFBQWdpSUFBQkFVQVFDQW9BZ0FBQVJGQUFBZ0tBSUFBRUVSQUFBSWlnQUFRRkFFQUFDQ0lnQUFFQlFCQUlDZ0NBQUFCRVVBQUNBb0FnQUFRUkVBQUFpS0FBQkFVQVFBQUlJaUFBQVFGQUVBZ0tBSUFCYUkrN3hIY01KbU5zR21mNURObitCc0VJRGpZRTMvR0djeVFaZFdTazgyZ3g4MUh6T2JvRXR0ZVlOL0tScy93Wm5oTTd3MTdySlVEdys4cm1VTlhick02dUdCNTVPZG9MdFdDdi9DNWM3dUtCWFd3Q3NCbDlySlAzKzVzejlPaFozZ0JuYTZPTDZnenI1UzBjUnJxdWtFdjZ5VkExbmlVdURXRUlCYlpXYjVhT0NlbXhrQWQwdEZQaHA0Vloxc0FHU3Q1SCs4dlRMT1ZqVHhnOHh1M2RKZjNHbnZqbE5wSjdocXVhd2xmOUZXeGczOTg4NnlGZmxYMUQ1UUtsbi9iMDBqZjBObXk4dzk1K0doV1dyZ2Zzdk02eXFQaG5ieXU4bkNOTTcycGUyVmR1SHVUWXRBYWRvYnAvK3owKzZXbms5NGRrbWFTUDlYS3kyNXEybWZaQ0VkeWw1U2UwV2VHemU3R1NNQXQ4ek02N29hN0RmekNzQXNUeWIxOE9Da1orZFNZYjQzU3M5ZTdEYnZDTWlsMHZ6S1VmR0hsenZ0ZExLemM2bVFIeWc5cjA3WnVDMkpTNlg4cW9vdldxZmR1Tm5OSGdHNFplNldpdnB3TDFlVlVyTSt6K25VRG5abk03WHMxbS9uMy8xR2IzZGNsTTFxUUhicnRmTHZmcjIzTnk1YUp4d0FTVm5XVTM3V2VudEtEV3RBbG5XVm4xWDNvSEZUbTR0bUxWanpZcFluNDN6VXVGTWdNL2M4ZyszLzFIU2JmSGxZZlBucVNxZHMxQ21RU2FQYS92QnlaellYTjlOdDhyYUtQMVc3M2F4VElKUEdzaStxMDZ5L3RMa2hBTWZCekxPUHIxNmMvdmU4UjNOTTNLMG82c1A5Nm1CM0JqY0FwZ3JUS050dnZMQnUxcHdQc25aYmI5ZlBYZW8rOVkxZXI1VlArZ2JBbEVrVDZiZTBudFNja05heVZlWG50ZktzOVhySzNBQzRkUVRnT0V6WHlzSEJaSDlIcVNsYkV6T3Y2L0gyUmRmc3FsYTdyYmJ5c3hlN24vMXFyMVBrZXZuWExwZVM2V0NTZnYxTEc5THNWcXdzNnlzL2I1Mm4xVnRScnBkL3JYUXBTUVBaRTlvNHljZG9ZeUVBeDhoR3I3N3NkYTJpbVBkSWJwbTdsZTN4OXNYcVlOZUsyWjYxdWhYSi8vMnpadzRucVZ0NG50MFBQaEhaN1d5MytvMFhOcDU2cGJjMnErMy9sTXNLK2NkdGF5RHJhUGsvU2RtbXF2K2h0V2V0MjJmN2Ywd0l3UEZKeWV0NjlNcEx5a3YrdCthdW9wanNYUmxmdldSbGE4WVhOTk12VEIxTTBpLzkvcGxSYmFhVGZHYitoR1czWHBrLzlkTHFKMTVjUDcxU1ZiTzlvSEdwSlIvSVBxYXRzYlRjbjZTc28veWtlcCswOVZPcUtsYi9ZMElBanMrMWRYTjd2SDNSeXZheVpzRDl0Wks5UEs5ZDQzVGQvUFJMcTU5NGNmMXNwNXJrcGZ4cnI5emFoUisrVnJJMGp6WHIycnBwL1U5cWJWUFZaRG5YelZwcXlZZXlqOW1aaVdUTE9ZdkZSQUNPMWZUazVPcWx5ZDYydFZmbVBacWI1MjVGS2Rub2xaYzgxMHB6Tzh2S2JsdmQ2aE12cm4vcTVkVUx2Y3FsdkZUYjE5cHRyWldUL04vKy9wbkJKSFhtZDVZMVBUbjVwSzAvcWQ1dHFuelozcDFReS9yeUpQL1AyaHJLMnN0L2xyVlFiUE9SeCtZOWhzWnhsMWw3ODF6NzlGbFowZ20vUmVmWXVGdFJWb1A5OGVWWHF1SEJySS8rdjRWSmsyeXRJbi80N3IwUDM3M1hMdkpSdlFSdmlYREozZGJiOWJNWHU3LzZ4VlBQWGV5dXRldFpIdjEvSzVNcVdTbi9BZC83QWUyMzVPTmxlSCtoU3k1YlZmMjhPdjlORzg5YloxVTFSLy9IaXdDY0ZLOG1yZlhUbmZOdlZWRW9aOGxuK0F6SVRYSlhTbVpwc3I5ejlJMC9kWmNWQy9FYXNlbm5kV1ZZUFByV2czLzIvc3Y5Vmo2cXpWMkwrY1pRbDdKYnUvQjI4aWUvM3Z2RnA4OVcyVlpiQy9FczAzUUUyeW9lOXNNZjEzWlBlU1R6UlQwQmNDbkxXdktXL0EvVS9VOTJwcEw2alhpV2FkRVFnQk5qcGx3ckZaM2I3bXl0blpMY2MzN3RTem1MOFh2c0xqT1ptYVZjVjZOWFg1N3M3MWdxWkxZSXEvL3JTdlBES3EyMjhqKzUvL0lIM2pLb1hhUEtLcGRwL2lXWWZrdzVXMHJlU3Q0cGZQdW8rQS9QYlgzMmEvMWU2WVg1SXF6K3J5dmtSMHBkNVIvejdRYzF6TkpZVmt0YWpCSk0xLzBrTCtVcjhsMFZIOWZtNzFtM0l5L2tyUDRuZ1FDY0pEUGw3UEt5dTlyZVBGZDBlbGFVa250MnllZTV5RnFTeVZMaHVmYXFtdXh0VDNZdSt3Sy95aUtaSnJVcXQvdlBEWC80bnIxN1RvODIyblhsTnE0dHU2cHNjenBqODFhU1NmMTJmVGdwcmg0Vm4vcks2aE4vc3JaOVZIUkwxMEtldGsvZkUxZkw3dldqeDdUM2JacXNxYTVsRTFtV2F0bGNMbFZOWGtxU2VzcERwVjJsSjlYL2JWdmRVZEhSZ242U3pVQUFac0Z6YlphczFTcjdHMlYvdGVqMFpUYU53VHl1Qmp4WEUrVmNIZXhXaC92MThIQTZ2QVcvVVdHU21RN0dxVlg0Mlc3MTBPMkQ5NTBidm5OejFDNTh2VjFubitub3AvL2JzclE5TElaMStsOWY2ejEzcWZ1Rks1MzljZXFVdVpVVytwYjE5SU1hS0xXVU4xWGY3OE43ZGZSMmpWdnlWZVU4ajkvSUxPMm9HTW4rUUwzbnRmS0NkUTZWMnNvdGlWdStKNG9BeklaTnQveWVheXRLbVJXZGZ0SHJ6K0ZSVVRPNVQvYTJsVDFYWTFteWxLNE5ieGtrazdzcXQ0TnhXbS9YN2NMZnZUbDZ6NW1qVVQzcmZFM3ZVWC82NWY2NFRwZUhSWm04VTNpUjVMNGNIK1gwbjFLcHBJSFNxbkpML25ZZnZVUGpzV3pHMzdNMWFTSjd5dnBqMlZVVnBid3RMNjdkQk1iSklnQ3pkZTE0M1QyN1BNOXA1VFZMU1NaWld0TExhNXQrNnk1YmRvMXJHK1g1dkgvRHBGN0xUZDVLN3JKRjN2WC9XVXhLOGxxV3BZbHNQS2ZMUUpNNnlpWk4vd0VEZHYwelU4NTdBTUZjVzZiTWtzbm05OGFJNlRBVzZVN3ZUWEdwemlZcG1Yb3Q3NnVhMTBpbXozY3UxSjNlbStMWHp2MlZwSzY4cDdsdFN2STNEUVl6UXdEbVoyblgzNFdTWFl2eVZOV1N5OUpybnlTZlp4UUwrdFFIQU9Da0VRQUFDSW9qb0pzMnIyZk9BYnc1NTFqMUpoR0FtMkNtSWhXanlXUUpINXdCR3M3bHJiSklsdW9sZlJIdlBCQ0FHNVhNNnB5djd1MWVPTHVWcG84ZGNpVUFMQVozRlVYYTN0ay9HZzlQcmExV2RUM3ZFUzBIQW5CRFVrcmp5YVJWbGovL0R6N3lrY2NmYlpXRit3Sy8zQTBJSm50ZVdXbi83eS8veWIvNUwvLzFNOC84MGRiR0dnMjRFWHdSN1ByTUxPZGMxZld2L01KUC9hWHYvNHQ3dTFlTmY1UUNXQ1FtcTNQdTl6cVRTZjNYUHZxTFQzejJtVTBhY0FNSXdQVWxzLzNCOE5mKzFjLzgwQWNmZWZYU2RydmtzZ2xZT0daV1ZYV3JYYmJMMW9mKzZjLzl6ak9mMzFqcmN6L2d6YkdXWFVlUjB0N2g0UEZISHZqUTl6NTBaWHRucGRXYTk0Z0F2TEd5TENhVHF0ZnQvTXlQL2RXbi8raExlUm5mempGYmZBL2dPc3hzTkJvLytONTN0Rm9sejVnQkM2NUlhVEFZZnVjOWI5czZ0VDZwYWg3YWZuTUU0QWFZamNhVGVROEN3QTFKS1kzR2t6cG5Gdi9ySWdEWFo2YXFxbk4ydm1ZQ0xENTNyM1BPL0xYZUFBSndIWFhPNi8zK3IvN1daeTVkMmVsMU96WFBGUUFMYkZKVjZ4dW5mK1dKVDMvOTRwV1Zkb3ROMjV2akthRHJTeWtkRElhUFBmeitqLy9DVDV0cE1EemlZQkZZTk81S3BxMnQwNy81NlNmL3pzLy91NXlWa2hHQU4wY0Fia2hSRkplMmQvN0tvOS96SC8vRlB6cS9lVW9wemVjZmN3VHdodHhsTnBsVS8vMjNuL3JiUC9kTEptdTNTazZCcm9zQTNLaWlTUHVIdy9OblRuL2tzZS9qZHd0WUtPN2VXVmw1K3ZOZmV1Snp2OWZyckJSRjRoblFHMEVBYmtKS2FUeXA5ZzhIWEZjQ2k4VWs5NVYyZTdYWEZhOEZ2V0Y4RWV3bTVKeGJaWEgyOU1hOEJ3TGdXNWc4TzEvOXZTa0U0T2E0T3k4WUFkQU1QQVlLQUVFUkFBQUlpZ0FBUUZBRUFBQ0NJZ0FBRUJRQkFJQ2dDQUFBQkVVQUFDQW9BZ0FBUVJFQUFBaUtBQUJBVUFRQUFJSWlBQUFRRkFFQWdLQUlBQUFFUlFBQUlDZ0NBQUJCRVFBQUNJb0FBRUJRQkFBQWdpSUFBQkFVQVFDQW9BZ0FBQVJGQUFBZ0tBSUFBRUVSQUFBSWlnQUFRRkFFQUFDQ0lnQUFFQlFCQUlDZ0NBQUFCRVVBQUNBb0FnQUFRUkVBQUFpS0FBQkFVQVFBQUlJaUFBQVFGQUVBZ0tBSUFBQUVSUUFBSUNnQ0FBQkJFUUFBQ0lvQUFFQlFCQUFBZ2lJQUFCQVVBUUNBb0FnQUFBUkZBQUFnS0FJQUFFRVJBQUFJaWdBQVFGQUVBQUNDSWdBQUVCUUJBSUNnQ0FBQUJFVUFBQ0FvQWdBQVFSRUFBQWlLQUFCQVVBUUFBSUlpQUFBUUZBRUFnS0FJQUFBRVJRQUFJQ2dDQUFCQkVRQUFDSW9BQUVCUUJBQUFnaUlBQUJBVUFRQ0FvQWdBQUFSRkFBQWdLQUlBQUVFUkFBQUlpZ0FBUUZBRUFBQ0NJZ0FBRUJRQkFJQ2dDQUFBQkVVQUFDQW9BZ0FBUVJFQUFBaUtBQUJBVUFRQUFJSWlBQUFRRkFFQWdLQUlBQUFFUlFBQUlDZ0NBQUJCRVFBQUNJb0FBRUJRQkFBQWdpSUFBQkFVQVFDQW9BZ0FBQVJGQUFBZ0tBSUFBRUVSQUFBSWlnQUFRRkFFQUFDQ0lnQUFFQlFCQUlDZ0NBQUFCRVVBQUNBb0FnQUFRUkVBQUFpS0FBQkFVQVFBQUlJaUFBQVExUDhEZTdkZ213NmVOWklBQUFBQVNVVk9SSzVDWUlJPSIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9wbmcifV19">
+<title>Ledger — Arnab's Fat-Loss Coach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Ledger — Arnab&#39;s Fat-Loss Coach_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEEE6; --card:#FFFFFF; --line:#D8D5C8; --ink:#1B2430; --ink-soft:#5B6472;
+    --teal:#1E5F74; --teal-deep:#123C49; --teal-tint:#E4EEF0;
+    --amber:#B8862B; --amber-tint:#FBF2E1;
+    --rust:#A23B2E; --rust-tint:#FBEAE7;
+    --green:#3F7D53; --green-tint:#E9F3EC;
+    --lcd-bg:#142118; --lcd-fg:#8FE388;
+    --radius:14px; --shadow:0 1px 2px rgba(27,36,48,0.06), 0 4px 16px rgba(27,36,48,0.05);
+    --tabbar-h:64px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  body{padding-bottom:calc(var(--tabbar-h) + 16px + env(safe-area-inset-bottom));}
+  .mono{font-family:'Space Mono',monospace;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 16px;}
+
+  header{background:var(--teal-deep);color:#fff;padding:16px 16px 18px;border-bottom:4px solid var(--teal);position:sticky;top:0;z-index:5;}
+  header .eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;}
+  header h1{margin:2px 0 0;font-size:19px;font-weight:800;letter-spacing:-0.01em;}
+  .datebar{display:flex;align-items:center;justify-content:space-between;margin-top:10px;background:rgba(255,255,255,0.08);border-radius:10px;padding:4px 4px;}
+  .datebar button{background:none;border:none;color:#fff;font-size:18px;padding:6px 14px;cursor:pointer;border-radius:8px;}
+  .datebar button:active{background:rgba(255,255,255,0.15);}
+  .datebar .datelabel{font-family:'Space Mono',monospace;font-size:12.5px;font-weight:700;}
+
+  main{padding-top:14px;}
+  .tabpanel{display:none;}
+  .tabpanel.active{display:block;}
+  section{margin-bottom:14px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;}
+  .section-title{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 10px 2px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;}
+  .section-title .hint{font-weight:400;text-transform:none;letter-spacing:0;font-size:11px;}
+
+  .readout{background:var(--lcd-bg);border-radius:12px;padding:16px 16px;color:var(--lcd-fg);position:relative;overflow:hidden;}
+  .readout::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(transparent,transparent 2px,rgba(0,0,0,0.15) 3px);pointer-events:none;}
+  .readout-top{display:flex;justify-content:space-between;align-items:baseline;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;margin-bottom:6px;}
+  .readout-num{font-family:'Space Mono',monospace;font-weight:700;font-size:42px;line-height:1;}
+  .readout-num .unit{font-size:15px;opacity:0.7;margin-left:6px;}
+  .readout-sub{font-family:'Space Mono',monospace;font-size:12px;margin-top:8px;opacity:0.85;}
+  .readout-sub b{font-weight:700;}
+
+  .macrobars{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px;}
+  .macrobar{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px;}
+  .macrobar .label{font-size:9.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);}
+  .macrobar .val{font-family:'Space Mono',monospace;font-size:15px;font-weight:700;margin-top:2px;}
+  .macrobar .track{height:6px;border-radius:3px;background:var(--line);margin-top:7px;overflow:hidden;}
+  .macrobar .fill{height:100%;border-radius:3px;}
+  .fill.p{background:var(--teal);} .fill.c{background:var(--amber);} .fill.f{background:var(--rust);}
+
+  .guide{border-radius:10px;padding:11px 13px;font-size:13.5px;line-height:1.45;margin-bottom:8px;display:flex;gap:10px;}
+  .guide:last-child{margin-bottom:0;}
+  .guide .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:6px;}
+  .guide.alert{background:var(--rust-tint);color:#7a2c22;} .guide.alert .dot{background:var(--rust);}
+  .guide.caution{background:var(--amber-tint);color:#7a5a1c;} .guide.caution .dot{background:var(--amber);}
+  .guide.good{background:var(--green-tint);color:#2c5c3d;} .guide.good .dot{background:var(--green);}
+
+  select,input[type=text],input[type=number],input[type=date],input[type=time]{
+    font-family:'Inter',sans-serif;font-size:16px;padding:10px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);width:100%;
+  }
+  label.flabel{font-size:11px;color:var(--ink-soft);display:block;margin-bottom:3px;}
+  .row{display:flex;gap:8px;align-items:flex-end;margin-bottom:8px;flex-wrap:wrap;}
+  .row > *{flex:1;min-width:110px;}
+  .btn{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:11px 14px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap;}
+  .btn-primary{background:var(--teal);color:#fff;}
+  .btn-primary:active{background:var(--teal-deep);}
+  .btn-ghost{background:var(--teal-tint);color:var(--teal-deep);}
+  .btn-danger{background:var(--rust-tint);color:var(--rust);}
+  .btn-sm{padding:8px 12px;font-size:12.5px;}
+  .qty-stepper{display:flex;align-items:center;gap:6px;background:var(--paper);border-radius:8px;padding:6px 8px;}
+  .qty-stepper button{background:none;border:none;font-size:16px;font-weight:700;color:var(--teal-deep);cursor:pointer;padding:4px 8px;}
+  .qty-stepper span{font-family:'Space Mono',monospace;font-size:13px;min-width:32px;text-align:center;}
+
+  .meal-slot{border-top:1px dashed var(--line);padding-top:12px;margin-top:12px;}
+  .meal-slot:first-child{border-top:none;padding-top:0;margin-top:0;}
+  .meal-slot .slot-title{font-size:12.5px;font-weight:700;color:var(--teal-deep);margin-bottom:6px;}
+
+  .freefoods{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+  .chip{font-family:'Space Mono',monospace;font-size:11.5px;padding:7px 11px;border-radius:20px;background:var(--paper);border:1px solid var(--line);cursor:pointer;color:var(--ink-soft);}
+  .chip:active{background:var(--teal-tint);border-color:var(--teal);color:var(--teal-deep);}
+
+  .logitem{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid var(--line);gap:10px;}
+  .logitem:first-child{border-top:none;}
+  .logitem .name{font-size:13.5px;flex:1;}
+  .logitem .macros{font-family:'Space Mono',monospace;font-size:11px;color:var(--ink-soft);white-space:nowrap;}
+  .logitem .del{background:none;border:none;color:var(--rust);font-size:18px;cursor:pointer;padding:4px 8px;}
+  .empty{font-size:13px;color:var(--ink-soft);font-style:italic;padding:8px 0;}
+
+  .weight-stats{display:flex;justify-content:space-between;margin-bottom:12px;}
+  .wstat{text-align:center;flex:1;}
+  .wstat .num{font-family:'Space Mono',monospace;font-weight:700;font-size:19px;color:var(--teal-deep);}
+  .wstat .lbl{font-size:9.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-soft);margin-top:2px;}
+
+  .recipe{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px;}
+  .recipe:last-child{margin-bottom:0;}
+  .recipe h4{margin:0 0 4px;font-size:14px;}
+  .recipe p{margin:0 0 6px;font-size:13px;color:var(--ink-soft);line-height:1.5;}
+  .recipe .rmacros{font-family:'Space Mono',monospace;font-size:11px;color:var(--teal-deep);}
+
+  .toggle-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;gap:10px;}
+  .toggle-row .lbl{font-size:13px;}
+  .switch{position:relative;width:40px;height:24px;flex-shrink:0;}
+  .switch input{opacity:0;width:0;height:0;}
+  .slider{position:absolute;cursor:pointer;inset:0;background:var(--line);border-radius:24px;transition:.2s;}
+  .slider:before{content:"";position:absolute;height:18px;width:18px;left:3px;top:3px;background:white;border-radius:50%;transition:.2s;}
+  input:checked + .slider{background:var(--teal);}
+  input:checked + .slider:before{transform:translateX(16px);}
+
+  details summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--teal-deep);padding:6px 0;}
+  .footer-note{font-size:11.5px;color:var(--ink-soft);text-align:center;padding:16px 16px 0;line-height:1.6;}
+  .flexend{display:flex;justify-content:flex-end;gap:8px;margin-top:10px;flex-wrap:wrap;}
+  .small{font-size:11.5px;color:var(--ink-soft);line-height:1.5;}
+
+  /* search / food db */
+  .searchresults{margin-top:8px;}
+  .searchitem{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;border:1px solid var(--line);border-radius:8px;margin-bottom:6px;cursor:pointer;background:#fff;}
+  .searchitem:active{background:var(--teal-tint);}
+  .searchitem .n{font-size:13px;} .searchitem .m{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--ink-soft);}
+  .calc-preview{background:var(--paper);border:1px dashed var(--line);border-radius:10px;padding:10px 12px;margin-top:8px;font-size:13px;}
+  .calc-preview b{font-family:'Space Mono',monospace;}
+
+  /* timeline */
+  .timeline{position:relative;padding-left:20px;margin-top:6px;}
+  .timeline::before{content:"";position:absolute;left:5px;top:4px;bottom:4px;width:2px;background:var(--line);}
+  .tl-item{position:relative;padding:7px 0;}
+  .tl-item::before{content:"";position:absolute;left:-19px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--teal);}
+  .tl-item .tl-time{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--teal-deep);}
+  .tl-item .tl-label{font-size:12.5px;color:var(--ink-soft);}
+
+  /* history table */
+  .htable{width:100%;border-collapse:collapse;font-size:12px;}
+  .htable th{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:var(--ink-soft);text-align:left;padding:6px 6px;border-bottom:1px solid var(--line);letter-spacing:0.04em;}
+  .htable td{padding:7px 6px;border-bottom:1px solid var(--line);font-family:'Space Mono',monospace;}
+  .htable-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  textarea.summary-out{width:100%;min-height:170px;font-family:'Space Mono',monospace;font-size:11.5px;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--paper);color:var(--ink);white-space:pre;}
+
+  /* tab bar */
+  .tabbar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;z-index:10;padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -2px 12px rgba(0,0,0,0.06);}
+  .tabbar button{flex:1;background:none;border:none;padding:9px 2px 8px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;color:var(--ink-soft);}
+  .tabbar button .ic{font-size:19px;line-height:1;}
+  .tabbar button .lb{font-size:9.5px;font-weight:600;letter-spacing:0.01em;}
+  .tabbar button.active{color:var(--teal-deep);}
+  .tabbar button.active .ic{transform:scale(1.05);}
+
+  @media (min-width:520px){
+    .macrobars{gap:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Ledger</div>
+    <h1>Arnab's Fat-Loss Coach</h1>
+    <div class="datebar">
+      <button id="prevDay">‹</button>
+      <div class="datelabel" id="dateLabel">Today</div>
+      <button id="nextDay">›</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===== TODAY ===== -->
+  <div class="tabpanel active" id="tab-today">
+    <section>
+      <div class="card">
+        <div class="readout">
+          <div class="readout-top"><span>Calories today</span><span id="calTargetLabel">/ 2100 target</span></div>
+          <div class="readout-num"><span id="calEaten">0</span><span class="unit">kcal</span></div>
+          <div class="readout-sub" id="calRemaining"><b>2100</b> kcal remaining</div>
+        </div>
+        <div class="macrobars">
+          <div class="macrobar"><div class="label">Protein</div><div class="val"><span id="pVal">0</span>g</div><div class="track"><div class="fill p" id="pFill" style="width:0%"></div></div></div>
+          <div class="macrobar"><div class="label">Carbs</div><div class="val"><span id="cVal">0</span>g</div><div class="track"><div class="fill c" id="cFill" style="width:0%"></div></div></div>
+          <div class="macrobar"><div class="label">Fat</div><div class="val"><span id="fVal">0</span>g</div><div class="track"><div class="fill f" id="fFill" style="width:0%"></div></div></div>
+        </div>
+        <details style="margin-top:12px;">
+          <summary>Edit targets</summary>
+          <div style="margin-top:10px;">
+            <div class="row">
+              <div><label class="flabel">Calories</label><input type="number" id="tCal"></div>
+              <div><label class="flabel">Protein g</label><input type="number" id="tP"></div>
+            </div>
+            <div class="row">
+              <div><label class="flabel">Carbs g</label><input type="number" id="tC"></div>
+              <div><label class="flabel">Fat g</label><input type="number" id="tF"></div>
+            </div>
+            <div class="toggle-row">
+              <span class="lbl">Add exercise calories back to today's budget</span>
+              <label class="switch"><input type="checkbox" id="addExerciseToggle"><span class="slider"></span></label>
+            </div>
+            <div class="flexend"><button class="btn btn-primary btn-sm" id="saveTargets">Save targets</button></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Guidance</div>
+      <div id="guidanceBox"><div class="guide good"><div class="dot"></div><div>Tracking well within budget. Stay on your 3.5L+ water and aim for 7h30m+ sleep tonight.</div></div></div>
+    </section>
+
+    <section>
+      <div class="section-title">Sleep &amp; meal schedule <span class="hint">based on wake time</span></div>
+      <div class="card" id="sleepSnapshotCard"><div class="empty">No sleep logged yet for this day.</div><div class="flexend"><button class="btn btn-ghost btn-sm" id="goLogSleep">Log sleep in Activity tab</button></div></div>
+    </section>
+  </div>
+
+  <!-- ===== FOOD ===== -->
+  <div class="tabpanel" id="tab-food">
+    <section>
+      <div class="section-title">Quick add from your plan</div>
+      <div class="card" id="mealSlots"><div class="meal-slot">
+        <div class="slot-title">Meal 1 (post-workout)</div>
+        <div class="row"><select id="sel_0"><option value="0">3 egg whites + 2 whole eggs (220 kcal)</option><option value="1">1.5 scoop whey protein (180 kcal)</option><option value="2">120g tofu + veggies (150 kcal)</option></select></div>
+        <div class="row" style="justify-content:space-between;">
+          <div class="qty-stepper"><button data-dir="-1" data-target="qty_0">−</button><span id="qty_0">1.0×</span><button data-dir="1" data-target="qty_0">+</button></div>
+          <button class="btn btn-ghost btn-sm" data-add="0">Add</button>
+        </div></div><div class="meal-slot">
+        <div class="slot-title">Meal 2 (snack)</div>
+        <div class="row"><select id="sel_1"><option value="0">Green tea/Americano + 10 almonds (90 kcal)</option><option value="1">Green tea/Americano + 10 walnuts (130 kcal)</option></select></div>
+        <div class="row" style="justify-content:space-between;">
+          <div class="qty-stepper"><button data-dir="-1" data-target="qty_1">−</button><span id="qty_1">1.0×</span><button data-dir="1" data-target="qty_1">+</button></div>
+          <button class="btn btn-ghost btn-sm" data-add="1">Add</button>
+        </div></div><div class="meal-slot">
+        <div class="slot-title">Meal 3 (main)</div>
+        <div class="row"><select id="sel_2"><option value="0">120g chicken breast + 40g brown rice + veggies (350 kcal)</option><option value="1">120g chicken breast + 2 bran chapati + veggies (340 kcal)</option><option value="2">120g low-fat curd + 20g pulses + 40g oats + veggies (300 kcal)</option><option value="3">30g soy nuggets + 40g quinoa + veggies (280 kcal)</option></select></div>
+        <div class="row" style="justify-content:space-between;">
+          <div class="qty-stepper"><button data-dir="-1" data-target="qty_2">−</button><span id="qty_2">1.0×</span><button data-dir="1" data-target="qty_2">+</button></div>
+          <button class="btn btn-ghost btn-sm" data-add="2">Add</button>
+        </div></div><div class="meal-slot">
+        <div class="slot-title">Meal 4 (evening — fish swapped out)</div>
+        <div class="row"><select id="sel_3"><option value="0">90g chicken breast + 2 bran chapati + veggies (260 kcal)</option><option value="1">80g low-fat paneer + 40g rice + veggies (280 kcal)</option><option value="2">2 egg whites + 1 whole egg + 180g potatoes + veggies (260 kcal)</option></select></div>
+        <div class="row" style="justify-content:space-between;">
+          <div class="qty-stepper"><button data-dir="-1" data-target="qty_3">−</button><span id="qty_3">1.0×</span><button data-dir="1" data-target="qty_3">+</button></div>
+          <button class="btn btn-ghost btn-sm" data-add="3">Add</button>
+        </div></div><div class="meal-slot">
+        <div class="slot-title">Meal 5 (night)</div>
+        <div class="row"><select id="sel_4"><option value="0">220ml low-fat milk + 10 nuts + 10g muesli (220 kcal)</option></select></div>
+        <div class="row" style="justify-content:space-between;">
+          <div class="qty-stepper"><button data-dir="-1" data-target="qty_4">−</button><span id="qty_4">1.0×</span><button data-dir="1" data-target="qty_4">+</button></div>
+          <button class="btn btn-ghost btn-sm" data-add="4">Add</button>
+        </div></div></div>
+    </section>
+
+    <section>
+      <div class="card">
+        <div class="section-title">Food calculator <span class="hint">type a food, enter quantity, I'll work out the macros</span></div>
+        <input type="text" id="foodSearch" placeholder="Search e.g. chicken breast, roti, banana...">
+        <div class="searchresults" id="foodResults"></div>
+        <div id="calcArea"></div>
+        <details style="margin-top:12px;">
+          <summary>Can't find it? Add manually</summary>
+          <div style="margin-top:10px;">
+            <div class="row"><input type="text" id="customName" placeholder="Food name"></div>
+            <div class="row">
+              <input type="number" id="customKcal" placeholder="kcal">
+              <input type="number" id="customP" placeholder="protein g">
+              <input type="number" id="customC" placeholder="carbs g">
+              <input type="number" id="customF" placeholder="fat g">
+            </div>
+            <div class="flexend"><button class="btn btn-primary btn-sm" id="addCustom">Add to log</button></div>
+          </div>
+        </details>
+        <div class="freefoods">
+          <div class="chip" data-free="Diet Coke / Coke Zero">🥤 Diet Coke — free</div>
+          <div class="chip" data-free="Black coffee">☕ Black coffee — free</div>
+          <div class="chip" data-free="Green tea">🍵 Green tea — free</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <div class="section-title">Logged today</div>
+        <div id="mealLog"><div class="empty">Nothing logged yet today.</div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== ACTIVITY ===== -->
+  <div class="tabpanel" id="tab-activity">
+    <section>
+      <div class="card">
+        <div class="meal-slot" style="border-top:none;padding-top:0;margin-top:0;">
+          <div class="slot-title">🏊 Swim</div>
+          <div class="row">
+            <div><label class="flabel">Minutes</label><input type="number" id="swimMin"></div>
+            <div><label class="flabel">Laps (optional)</label><input type="number" id="swimLaps"></div>
+          </div>
+          <div class="flexend"><button class="btn btn-primary btn-sm" id="addSwim">Add swim</button></div>
+        </div>
+        <div class="meal-slot">
+          <div class="slot-title">💪 Other workout — whenever you fit one in</div>
+          <div class="row">
+            <div><label class="flabel">Type</label>
+              <select id="workoutType">
+                <option>Strength / Weights</option><option>Cardio (other)</option><option>Sports</option>
+                <option>Yoga / Mobility</option><option>Walk</option><option>Other</option>
+              </select>
+            </div>
+            <div><label class="flabel">Intensity</label>
+              <select id="workoutIntensity"><option>Light</option><option selected="">Moderate</option><option>Intense</option></select>
+            </div>
+          </div>
+          <div class="row"><div><label class="flabel">Minutes</label><input type="number" id="workoutMin"></div></div>
+          <div class="flexend"><button class="btn btn-primary btn-sm" id="addWorkout">Add workout</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <div class="section-title">Sleep <span class="hint">log last night's sleep</span></div>
+        <div class="row">
+          <div><label class="flabel">Bedtime</label><input type="time" id="sleepBed"></div>
+          <div><label class="flabel">Wake time</label><input type="time" id="sleepWake"></div>
+        </div>
+        <div class="row">
+          <div><label class="flabel">Quality</label>
+            <select id="sleepQuality"><option>Poor</option><option>Fair</option><option selected="">Good</option><option>Great</option></select>
+          </div>
+        </div>
+        <div class="flexend"><button class="btn btn-primary btn-sm" id="saveSleep">Save sleep</button></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <div class="section-title">Logged today <span class="hint" id="burnLabel"></span></div>
+        <div id="activityLog"><div class="empty">No activity logged today.</div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== WEIGHT ===== -->
+  <div class="tabpanel" id="tab-weight">
+    <section>
+      <div class="card">
+        <div class="weight-stats">
+          <div class="wstat"><div class="num" id="wCurrent">117.0</div><div class="lbl">Current kg</div></div>
+          <div class="wstat"><div class="num" id="wLost">0.0</div><div class="lbl">Lost so far</div></div>
+          <div class="wstat"><div class="num" id="wToGo">37.0</div><div class="lbl">Kg to go</div></div>
+        </div>
+        <svg id="weightChart" viewBox="0 0 600 180" style="width:100%;height:140px;"><line x1="30" y1="144.14634146341464" x2="570" y2="144.14634146341464" stroke="#3F7D53" stroke-width="1.5" stroke-dasharray="4,4"></line><text x="570" y="138.14634146341464" text-anchor="end" font-size="10" fill="#3F7D53" font-family="Space Mono">target 80kg</text><path d="M30,35.85365853658537 " fill="none" stroke="#1E5F74" stroke-width="2.5"></path><circle cx="30" cy="35.85365853658537" r="3.5" fill="#1E5F74"></circle></svg>
+        <div class="row" style="margin-top:8px;">
+          <div><label class="flabel">Date</label><input type="date" id="weightDate"></div>
+          <div><label class="flabel">Weight kg</label><input type="number" step="0.1" id="weightVal"></div>
+        </div>
+        <div class="flexend"><button class="btn btn-primary btn-sm" id="addWeight">Log weight</button></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== HISTORY ===== -->
+  <div class="tabpanel" id="tab-history">
+    <section>
+      <div class="card">
+        <div class="section-title">Summary <span class="hint">copy this back to Claude every 2–4 weeks</span></div>
+        <div class="row">
+          <select id="rangeSelect">
+            <option value="7">Last 7 days</option>
+            <option value="14" selected="">Last 14 days</option>
+            <option value="30">Last 30 days</option>
+            <option value="9999">All time</option>
+          </select>
+        </div>
+        <textarea class="summary-out" id="summaryOut" readonly=""></textarea>
+        <div class="flexend">
+          <button class="btn btn-ghost btn-sm" id="copySummary">Copy summary</button>
+          <button class="btn btn-ghost btn-sm" id="exportCsv">Export CSV</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <div class="section-title">Day-by-day log</div>
+        <div class="htable-wrap">
+          <table class="htable">
+            <thead><tr><th>Date</th><th>Kcal</th><th>P</th><th>C</th><th>F</th><th>Burn</th><th>Sleep</th><th>Wt</th></tr></thead>
+            <tbody id="historyBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <div class="section-title">Data</div>
+        <div class="row">
+          <button class="btn btn-danger btn-sm" id="clearDay">Clear today</button>
+          <button class="btn btn-danger btn-sm" id="clearAll">Clear all data</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== RECIPES ===== -->
+  <div class="tabpanel" id="tab-recipes">
+    <section>
+      <div class="card" id="recipeBox"><div class="recipe"><h4>Spiced Chicken &amp; Veggie Stir-Fry</h4><p>150g chicken breast strips, mixed peppers, onion, garlic, spray oil, chilli flakes, splash of low-sodium soy. High heat, fast toss.</p><div class="rmacros">~300 kcal · P40 · C10 · F8</div></div><div class="recipe"><h4>Masala Egg White Scramble</h4><p>4 egg whites + 1 whole egg, tomato, onion, green chilli, turmeric, spray oil. Classic diet-friendly bhurji style.</p><div class="rmacros">~180 kcal · P22 · C6 · F7</div></div><div class="recipe"><h4>Tandoori-Style Grilled Chicken</h4><p>150g chicken breast marinated in low-fat curd, tandoori masala, lemon. Grill or air-fry until charred at the edges.</p><div class="rmacros">~230 kcal · P42 · C4 · F5</div></div><div class="recipe"><h4>Low-Fat Paneer Bhurji</h4><p>100g low-fat paneer crumbled, onion, tomato, capsicum, turmeric, spray oil. Quick, filling, freezer-friendly leftovers.</p><div class="rmacros">~200 kcal · P18 · C8 · F11</div></div><div class="recipe"><h4>Tofu &amp; Quinoa Veggie Bowl</h4><p>120g tofu, 40g cooked quinoa, mixed roasted veggies, lemon-garlic dressing. Good meat-free swap for Meal 3.</p><div class="rmacros">~280 kcal · P18 · C30 · F8</div></div><div class="recipe"><h4>High-Protein Chicken &amp; Rice Soup</h4><p>100g shredded chicken breast, 30g rice, carrots, celery, ginger-garlic broth. Great low-effort Meal 4 option.</p><div class="rmacros">~220 kcal · P28 · C20 · F3</div></div></div>
+    </section>
+  </div>
+
+  <div class="footer-note">
+    Estimates only — food database and workout values are general reference figures, not lab-measured for your specific ingredients. Guidance is pattern-level info, not medical advice. Meal reminders only fire while this tab is open in your browser (a browser limitation, especially on iPhone) — treat them as a bonus nudge. Data lives in this browser only — export CSV or copy your summary regularly as a backup.
+  </div>
+</main>
+
+<nav class="tabbar">
+  <button data-tab="today" class="active"><span class="ic">📋</span><span class="lb">Today</span></button>
+  <button data-tab="food"><span class="ic">🍽</span><span class="lb">Food</span></button>
+  <button data-tab="activity"><span class="ic">🏊</span><span class="lb">Activity</span></button>
+  <button data-tab="weight"><span class="ic">⚖️</span><span class="lb">Weight</span></button>
+  <button data-tab="history"><span class="ic">📊</span><span class="lb">History</span></button>
+  <button data-tab="recipes"><span class="ic">📖</span><span class="lb">Recipes</span></button>
+</nav>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const todayStr = d => d.toISOString().slice(0,10);
+  let currentDate = new Date(); currentDate.setHours(0,0,0,0);
+  let reminderTimers = [];
+
+  // ---------- Tabs ----------
+  function switchTab(name){
+    document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.tabbar button').forEach(b=>b.classList.remove('active'));
+    $('tab-'+name).classList.add('active');
+    document.querySelector('.tabbar button[data-tab="'+name+'"]').classList.add('active');
+    if(name==='history') renderHistory();
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('.tabbar button').forEach(b=> b.onclick = ()=> switchTab(b.dataset.tab));
+
+  // ---------- Meal presets ----------
+  const MEAL_PRESETS = {
+    "Meal 1 (post-workout)": [
+      {name:"3 egg whites + 2 whole eggs", kcal:220,p:24,c:2,f:14},
+      {name:"1.5 scoop whey protein", kcal:180,p:36,c:3,f:2},
+      {name:"120g tofu + veggies", kcal:150,p:14,c:6,f:8}
+    ],
+    "Meal 2 (snack)": [
+      {name:"Green tea/Americano + 10 almonds", kcal:90,p:3,c:3,f:7},
+      {name:"Green tea/Americano + 10 walnuts", kcal:130,p:3,c:3,f:12}
+    ],
+    "Meal 3 (main)": [
+      {name:"120g chicken breast + 40g brown rice + veggies", kcal:350,p:38,c:32,f:6},
+      {name:"120g chicken breast + 2 bran chapati + veggies", kcal:340,p:37,c:30,f:7},
+      {name:"120g low-fat curd + 20g pulses + 40g oats + veggies", kcal:300,p:22,c:40,f:5},
+      {name:"30g soy nuggets + 40g quinoa + veggies", kcal:280,p:20,c:38,f:4}
+    ],
+    "Meal 4 (evening — fish swapped out)": [
+      {name:"90g chicken breast + 2 bran chapati + veggies", kcal:260,p:30,c:22,f:5},
+      {name:"80g low-fat paneer + 40g rice + veggies", kcal:280,p:20,c:30,f:9},
+      {name:"2 egg whites + 1 whole egg + 180g potatoes + veggies", kcal:260,p:16,c:34,f:7}
+    ],
+    "Meal 5 (night)": [
+      {name:"220ml low-fat milk + 10 nuts + 10g muesli", kcal:220,p:10,c:20,f:10}
+    ]
+  };
+
+  const RECIPES = [
+    {name:"Spiced Chicken & Veggie Stir-Fry", desc:"150g chicken breast strips, mixed peppers, onion, garlic, spray oil, chilli flakes, splash of low-sodium soy. High heat, fast toss.", macros:"~300 kcal · P40 · C10 · F8"},
+    {name:"Masala Egg White Scramble", desc:"4 egg whites + 1 whole egg, tomato, onion, green chilli, turmeric, spray oil. Classic diet-friendly bhurji style.", macros:"~180 kcal · P22 · C6 · F7"},
+    {name:"Tandoori-Style Grilled Chicken", desc:"150g chicken breast marinated in low-fat curd, tandoori masala, lemon. Grill or air-fry until charred at the edges.", macros:"~230 kcal · P42 · C4 · F5"},
+    {name:"Low-Fat Paneer Bhurji", desc:"100g low-fat paneer crumbled, onion, tomato, capsicum, turmeric, spray oil. Quick, filling, freezer-friendly leftovers.", macros:"~200 kcal · P18 · C8 · F11"},
+    {name:"Tofu & Quinoa Veggie Bowl", desc:"120g tofu, 40g cooked quinoa, mixed roasted veggies, lemon-garlic dressing. Good meat-free swap for Meal 3.", macros:"~280 kcal · P18 · C30 · F8"},
+    {name:"High-Protein Chicken & Rice Soup", desc:"100g shredded chicken breast, 30g rice, carrots, celery, ginger-garlic broth. Great low-effort Meal 4 option.", macros:"~220 kcal · P28 · C20 · F3"}
+  ];
+
+  // ---------- Food database (reference values; g/ml = per 100, piece = per 1 unless noted) ----------
+  const FOOD_DB = [
+    {name:"Chicken breast, raw", unit:"g", ref:100, kcal:120, p:22.5, c:0, f:2.6},
+    {name:"Chicken thigh, raw (skinless)", unit:"g", ref:100, kcal:145, p:17, c:0, f:8},
+    {name:"Egg, whole (1 large)", unit:"piece", ref:1, kcal:72, p:6.3, c:0.4, f:4.8},
+    {name:"Egg white (1 large)", unit:"piece", ref:1, kcal:17, p:3.6, c:0.2, f:0.1},
+    {name:"Paneer, low-fat", unit:"g", ref:100, kcal:180, p:20, c:6, f:8},
+    {name:"Paneer, regular", unit:"g", ref:100, kcal:265, p:18, c:1.2, f:21},
+    {name:"Tofu, firm", unit:"g", ref:100, kcal:76, p:8, c:1.9, f:4.8},
+    {name:"Whey protein (1 scoop ~30g)", unit:"piece", ref:1, kcal:120, p:24, c:3, f:1.5},
+    {name:"Greek yoghurt, low fat", unit:"g", ref:100, kcal:60, p:10, c:3.6, f:0.4},
+    {name:"Curd / dahi, low fat", unit:"g", ref:100, kcal:55, p:3.5, c:5, f:1.5},
+    {name:"Soy nuggets / chunks, raw", unit:"g", ref:100, kcal:345, p:52, c:33, f:0.5},
+    {name:"Brown rice, raw", unit:"g", ref:100, kcal:362, p:7.5, c:76, f:2.7},
+    {name:"White rice, raw", unit:"g", ref:100, kcal:365, p:7, c:79, f:0.6},
+    {name:"Roti / chapati, whole wheat (1 medium)", unit:"piece", ref:1, kcal:80, p:2.5, c:17, f:0.5},
+    {name:"Bran chapati (1 medium)", unit:"piece", ref:1, kcal:70, p:3, c:13, f:1},
+    {name:"Brown bread (1 slice)", unit:"piece", ref:1, kcal:75, p:3.5, c:13, f:1},
+    {name:"Oats, raw", unit:"g", ref:100, kcal:389, p:16.9, c:66, f:6.9},
+    {name:"Quinoa, raw", unit:"g", ref:100, kcal:368, p:14, c:64, f:6},
+    {name:"Idli (1 piece)", unit:"piece", ref:1, kcal:58, p:2, c:12, f:0.2},
+    {name:"Brown pasta, raw", unit:"g", ref:100, kcal:348, p:13, c:68, f:2.5},
+    {name:"Rice noodles, raw", unit:"g", ref:100, kcal:364, p:6, c:82, f:0.6},
+    {name:"Potato, raw", unit:"g", ref:100, kcal:77, p:2, c:17, f:0.1},
+    {name:"Sweet potato, raw", unit:"g", ref:100, kcal:86, p:1.6, c:20, f:0.1},
+    {name:"Muesli", unit:"g", ref:100, kcal:375, p:10, c:67, f:6},
+    {name:"Burger bun, whole wheat (1 piece)", unit:"piece", ref:1, kcal:130, p:5, c:24, f:2},
+    {name:"Banana (1 medium)", unit:"piece", ref:1, kcal:105, p:1.3, c:27, f:0.4},
+    {name:"Apple (1 medium)", unit:"piece", ref:1, kcal:95, p:0.5, c:25, f:0.3},
+    {name:"Almonds (10 pieces)", unit:"piece", ref:10, kcal:70, p:2.5, c:2.5, f:6},
+    {name:"Walnuts (10 halves)", unit:"piece", ref:10, kcal:130, p:3, c:2.7, f:13},
+    {name:"Peanuts, raw", unit:"g", ref:100, kcal:567, p:26, c:16, f:49},
+    {name:"Olive oil (1 tsp)", unit:"piece", ref:1, kcal:40, p:0, c:0, f:4.5},
+    {name:"Ghee (1 tsp)", unit:"piece", ref:1, kcal:45, p:0, c:0, f:5},
+    {name:"Milk, low-fat", unit:"ml", ref:100, kcal:46, p:3.4, c:5, f:1},
+    {name:"Milk, full-fat", unit:"ml", ref:100, kcal:60, p:3.2, c:4.7, f:3.3},
+    {name:"Mixed vegetables, raw", unit:"g", ref:100, kcal:35, p:2, c:7, f:0.3},
+    {name:"Spinach, raw", unit:"g", ref:100, kcal:23, p:2.9, c:3.6, f:0.4},
+    {name:"Broccoli, raw", unit:"g", ref:100, kcal:34, p:2.8, c:7, f:0.4},
+    {name:"Chickpeas / chana, raw dry", unit:"g", ref:100, kcal:364, p:19, c:61, f:6},
+    {name:"Dal / lentils, raw dry", unit:"g", ref:100, kcal:343, p:24, c:60, f:1.1},
+    {name:"Rajma, raw dry", unit:"g", ref:100, kcal:333, p:24, c:60, f:1.3},
+    {name:"Sprouts, mixed", unit:"g", ref:100, kcal:100, p:7, c:17, f:0.5},
+    {name:"Buttermilk / chaas", unit:"ml", ref:100, kcal:25, p:1.5, c:2.5, f:0.8},
+    {name:"Diet Coke / Coke Zero", unit:"piece", ref:1, kcal:1, p:0, c:0, f:0},
+    {name:"Black coffee", unit:"piece", ref:1, kcal:2, p:0, c:0, f:0},
+    {name:"Green tea", unit:"piece", ref:1, kcal:2, p:0, c:0, f:0}
+  ];
+
+  // ---------- Storage ----------
+  const DEFAULT_SETTINGS = {targetCal:2100, targetP:190, targetC:200, targetF:60, addExercise:false, remindersEnabled:false};
+  function loadSettings(){ try{ return {...DEFAULT_SETTINGS, ...JSON.parse(localStorage.getItem('ledger_settings')||'{}')}; } catch(e){ return {...DEFAULT_SETTINGS}; } }
+  function saveSettings(s){ localStorage.setItem('ledger_settings', JSON.stringify(s)); }
+
+  function loadDay(dateKey){
+    try{
+      const d = JSON.parse(localStorage.getItem('ledger_day_'+dateKey));
+      return d ? {meals:d.meals||[], activities:d.activities||[], sleep:d.sleep||null} : {meals:[], activities:[], sleep:null};
+    }catch(e){ return {meals:[], activities:[], sleep:null}; }
+  }
+  function saveDay(dateKey, data){ localStorage.setItem('ledger_day_'+dateKey, JSON.stringify(data)); }
+
+  function loadWeights(){ try{ return JSON.parse(localStorage.getItem('ledger_weights')) || []; } catch(e){ return []; } }
+  function saveWeights(w){ localStorage.setItem('ledger_weights', JSON.stringify(w)); }
+
+  let settings = loadSettings();
+
+  // ---------- Date header ----------
+  function fmtLabel(d){
+    const t = new Date(); t.setHours(0,0,0,0);
+    const diff = Math.round((d - t)/86400000);
+    if(diff===0) return "Today";
+    if(diff===-1) return "Yesterday";
+    if(diff===1) return "Tomorrow";
+    return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});
+  }
+  function renderDateLabel(){ $('dateLabel').textContent = fmtLabel(currentDate); }
+  $('prevDay').onclick = ()=>{ currentDate.setDate(currentDate.getDate()-1); refreshAll(); };
+  $('nextDay').onclick = ()=>{ currentDate.setDate(currentDate.getDate()+1); refreshAll(); };
+
+  // ---------- Meal slots UI ----------
+  function renderMealSlots(){
+    const box = $('mealSlots'); box.innerHTML = '';
+    Object.keys(MEAL_PRESETS).forEach((slot, idx)=>{
+      const opts = MEAL_PRESETS[slot];
+      const div = document.createElement('div'); div.className = 'meal-slot';
+      const selId = 'sel_'+idx, qtyId='qty_'+idx;
+      div.innerHTML = `
+        <div class="slot-title">${slot}</div>
+        <div class="row"><select id="${selId}">${opts.map((o,i)=>`<option value="${i}">${o.name} (${o.kcal} kcal)</option>`).join('')}</select></div>
+        <div class="row" style="justify-content:space-between;">
+          <div class="qty-stepper"><button data-dir="-1" data-target="${qtyId}">−</button><span id="${qtyId}">1.0×</span><button data-dir="1" data-target="${qtyId}">+</button></div>
+          <button class="btn btn-ghost btn-sm" data-add="${idx}">Add</button>
+        </div>`;
+      box.appendChild(div);
+    });
+    box.querySelectorAll('[data-dir]').forEach(btn=>{
+      btn.onclick = ()=>{ const span = document.getElementById(btn.dataset.target); let v = parseFloat(span.textContent); v += parseInt(btn.dataset.dir)*0.5; if(v<0.5) v=0.5; span.textContent = v.toFixed(1)+'×'; };
+    });
+    box.querySelectorAll('[data-add]').forEach(btn=>{
+      btn.onclick = ()=>{
+        const idx = btn.dataset.add; const slotName = Object.keys(MEAL_PRESETS)[idx];
+        const opt = MEAL_PRESETS[slotName][document.getElementById('sel_'+idx).value];
+        const qty = parseFloat(document.getElementById('qty_'+idx).textContent);
+        addMeal({name:`${opt.name} (${qty}×)`, kcal:Math.round(opt.kcal*qty), p:Math.round(opt.p*qty), c:Math.round(opt.c*qty), f:Math.round(opt.f*qty)});
+      };
+    });
+  }
+  document.querySelectorAll('.chip[data-free]').forEach(chip=>{ chip.onclick = ()=> addMeal({name:chip.dataset.free, kcal:0, p:0, c:0, f:0}); });
+
+  $('addCustom').onclick = ()=>{
+    const name = $('customName').value.trim();
+    if(!name){ alert('Give the food a name first.'); return; }
+    const kcal = parseFloat($('customKcal').value)||0, p = parseFloat($('customP').value)||0, c = parseFloat($('customC').value)||0, f = parseFloat($('customF').value)||0;
+    addMeal({name, kcal, p, c, f});
+    $('customName').value=''; $('customKcal').value=''; $('customP').value=''; $('customC').value=''; $('customF').value='';
+  };
+
+  // ---------- Food calculator ----------
+  let selectedFood = null;
+  $('foodSearch').addEventListener('input', ()=>{
+    const q = $('foodSearch').value.trim().toLowerCase();
+    const res = $('foodResults'); res.innerHTML = ''; $('calcArea').innerHTML=''; selectedFood=null;
+    if(q.length<2) return;
+    const matches = FOOD_DB.filter(f=>f.name.toLowerCase().includes(q)).slice(0,7);
+    if(matches.length===0){ res.innerHTML = '<div class="empty">No match — add it manually below.</div>'; return; }
+    matches.forEach(f=>{
+      const div = document.createElement('div'); div.className='searchitem';
+      div.innerHTML = `<span class="n">${f.name}</span><span class="m">${f.kcal}kcal / ${f.ref}${f.unit==='piece'?'pc':f.unit}</span>`;
+      div.onclick = ()=> selectFood(f);
+      res.appendChild(div);
+    });
+  });
+  function selectFood(f){
+    selectedFood = f; $('foodResults').innerHTML='';
+    $('foodSearch').value = f.name;
+    const unitLabel = f.unit==='piece' ? 'pieces' : (f.unit==='ml'?'ml':'grams');
+    $('calcArea').innerHTML = `
+      <div class="row" style="margin-top:8px;">
+        <div><label class="flabel">Quantity (${unitLabel})</label><input type="number" id="calcQty" value="${f.ref}" step="${f.unit==='piece'?1:5}"></div>
+        <div style="flex:0;"><button class="btn btn-primary btn-sm" id="calcAdd">Add to log</button></div>
+      </div>
+      <div class="calc-preview" id="calcPreview"></div>
+    `;
+    updatePreview();
+    $('calcQty').addEventListener('input', updatePreview);
+    $('calcAdd').onclick = ()=>{
+      const qty = parseFloat($('calcQty').value)||f.ref;
+      const factor = qty/f.ref;
+      addMeal({name:`${f.name} (${qty}${f.unit==='piece'?'pc':f.unit})`, kcal:Math.round(f.kcal*factor), p:Math.round(f.p*factor*10)/10, c:Math.round(f.c*factor*10)/10, f:Math.round(f.f*factor*10)/10});
+      $('foodSearch').value=''; $('calcArea').innerHTML=''; selectedFood=null;
+    };
+  }
+  function updatePreview(){
+    if(!selectedFood) return;
+    const qty = parseFloat($('calcQty').value)||0;
+    const factor = qty/selectedFood.ref;
+    const kcal = Math.round(selectedFood.kcal*factor), p=Math.round(selectedFood.p*factor*10)/10, c=Math.round(selectedFood.c*factor*10)/10, ff=Math.round(selectedFood.f*factor*10)/10;
+    $('calcPreview').innerHTML = `<b>${kcal} kcal</b> · P ${p}g · C ${c}g · F ${ff}g`;
+  }
+
+  function addMeal(item){
+    const key = todayStr(currentDate); const day = loadDay(key);
+    item.id = Date.now()+Math.random(); day.meals.push(item); saveDay(key, day); refreshDashboard();
+  }
+  function deleteMeal(id){
+    const key = todayStr(currentDate); const day = loadDay(key);
+    day.meals = day.meals.filter(m=>m.id!==id); saveDay(key, day); refreshDashboard();
+  }
+
+  // ---------- Activity ----------
+  $('addSwim').onclick = ()=>{
+    const min = parseFloat($('swimMin').value); if(!min){ alert('Enter swim duration in minutes.'); return; }
+    const laps = $('swimLaps').value; const kcal = Math.round(min*9);
+    addActivity({label:`Swim — ${min} min${laps? ' · '+laps+' laps':''}`, kcal});
+    $('swimMin').value=''; $('swimLaps').value='';
+  };
+  $('addWorkout').onclick = ()=>{
+    const min = parseFloat($('workoutMin').value); if(!min){ alert('Enter workout duration in minutes.'); return; }
+    const type = $('workoutType').value, intensity = $('workoutIntensity').value;
+    const rate = intensity==='Light'?5:intensity==='Moderate'?8:11;
+    addActivity({label:`${type} — ${min} min (${intensity})`, kcal:Math.round(min*rate)});
+    $('workoutMin').value='';
+  };
+  function addActivity(item){
+    const key = todayStr(currentDate); const day = loadDay(key);
+    item.id = Date.now()+Math.random(); day.activities.push(item); saveDay(key, day); refreshDashboard();
+  }
+  function deleteActivity(id){
+    const key = todayStr(currentDate); const day = loadDay(key);
+    day.activities = day.activities.filter(a=>a.id!==id); saveDay(key, day); refreshDashboard();
+  }
+
+  // ---------- Sleep ----------
+  $('saveSleep').onclick = ()=>{
+    const bed = $('sleepBed').value, wake = $('sleepWake').value, quality = $('sleepQuality').value;
+    if(!wake){ alert('At least enter a wake time.'); return; }
+    let hours = null;
+    if(bed && wake){
+      const [bh,bm] = bed.split(':').map(Number), [wh,wm] = wake.split(':').map(Number);
+      let bedMin = bh*60+bm, wakeMin = wh*60+wm;
+      if(wakeMin <= bedMin) wakeMin += 24*60;
+      hours = Math.round(((wakeMin-bedMin)/60)*10)/10;
+    }
+    const key = todayStr(currentDate); const day = loadDay(key);
+    day.sleep = {bed, wake, hours, quality}; saveDay(key, day);
+    loadSleepToForm(); refreshDashboard();
+    alert('Sleep saved.');
+  };
+  function loadSleepToForm(){
+    const day = loadDay(todayStr(currentDate));
+    if(day.sleep){ $('sleepBed').value = day.sleep.bed||''; $('sleepWake').value = day.sleep.wake||''; $('sleepQuality').value = day.sleep.quality||'Good'; }
+    else { $('sleepBed').value=''; $('sleepWake').value=''; $('sleepQuality').value='Good'; }
+  }
+
+  function computeMealSchedule(wakeHHMM){
+    const [h,m] = wakeHHMM.split(':').map(Number);
+    let mins = h*60+m;
+    const addH = hrs => { mins += hrs*60; const hh = Math.floor(mins/60)%24, mm = Math.round(mins%60); const ap = hh>=12?'PM':'AM'; let h12 = hh%12; if(h12===0) h12=12; return `${h12}:${String(mm).padStart(2,'0')} ${ap}`; };
+    const wakeFmt = addH(0);
+    const workoutWindow = `${addH(1)} – ${(()=>{ const save=mins; mins-=1*60; const r=addH(2); return r; })()}`;
+    // reset mins after workoutWindow calc quirk; recompute cleanly instead:
+    mins = h*60+m;
+    const wake = fmtMin(mins);
+    const workoutStart = fmtMin(mins+60), workoutEnd = fmtMin(mins+180);
+    const meal1 = fmtMin(mins + 3.5*60);
+    const meal2 = fmtMin(mins + (3.5+2.5)*60);
+    const meal3 = fmtMin(mins + (3.5+2.5+2.5)*60);
+    const eveningCardio = fmtMin(mins + (3.5+2.5+2.5+1)*60);
+    const meal4 = fmtMin(mins + (3.5+2.5+2.5+2.75)*60);
+    const meal5 = fmtMin(mins + (3.5+2.5+2.5+2.75+2.5)*60);
+    return [
+      {t:wake, l:'Wake up'},
+      {t:`${workoutStart} – ${workoutEnd}`, l:'Suggested workout window (swim / other)'},
+      {t:meal1, l:'Meal 1 — post-workout'},
+      {t:meal2, l:'Meal 2 — snack'},
+      {t:meal3, l:'Meal 3 — main'},
+      {t:eveningCardio, l:'Evening cardio / walk window'},
+      {t:meal4, l:'Meal 4 — evening'},
+      {t:meal5, l:'Meal 5 — night'}
+    ];
+  }
+  function fmtMin(mins){
+    mins = ((mins%1440)+1440)%1440;
+    const hh = Math.floor(mins/60), mm = Math.round(mins%60);
+    const ap = hh>=12?'PM':'AM'; let h12 = hh%12; if(h12===0) h12=12;
+    return `${h12}:${String(mm).padStart(2,'0')} ${ap}`;
+  }
+
+  function renderSleepSnapshot(){
+    const day = loadDay(todayStr(currentDate));
+    const box = $('sleepSnapshotCard');
+    if(!day.sleep || !day.sleep.wake){
+      box.innerHTML = `<div class="empty">No sleep logged yet for this day.</div><div class="flexend"><button class="btn btn-ghost btn-sm" id="goLogSleep">Log sleep in Activity tab</button></div>`;
+      $('goLogSleep').onclick = ()=>{ switchTab('activity'); loadSleepToForm(); $('sleepWake').focus(); };
+      return;
+    }
+    const hrs = day.sleep.hours;
+    let hrsColor = 'good', hrsText = '';
+    if(hrs!==null){
+      hrsText = `${Math.floor(hrs)}h ${Math.round((hrs%1)*60)}m`;
+      hrsColor = hrs>=7.5 ? 'good' : hrs>=6 ? 'caution' : 'alert';
+    }
+    const schedule = computeMealSchedule(day.sleep.wake);
+    box.innerHTML = `
+      ${hrs!==null ? `<div class="guide ${hrsColor}"><div class="dot"></div><div>Slept <b>${hrsText}</b> (target 7h30m) · quality: ${day.sleep.quality}</div></div>` : ''}
+      <div class="timeline">${schedule.map(s=>`<div class="tl-item"><div class="tl-time">${s.t}</div><div class="tl-label">${s.l}</div></div>`).join('')}</div>
+      <div class="small" style="margin-top:8px;">Adjust to your own hunger and schedule — this is a guide, not a rule. Reminders only fire while this tab stays open (browser limitation, especially on iPhone).</div>
+      <div class="toggle-row">
+        <span class="lbl">Notify me at meal times</span>
+        <label class="switch"><input type="checkbox" id="remindersToggle" ${settings.remindersEnabled?'checked':''}><span class="slider"></span></label>
+      </div>
+    `;
+    $('remindersToggle').onchange = ()=>{
+      settings.remindersEnabled = $('remindersToggle').checked; saveSettings(settings);
+      if(settings.remindersEnabled) enableReminders(schedule); else clearReminders();
+    };
+    if(settings.remindersEnabled) enableReminders(schedule);
+  }
+  function clearReminders(){ reminderTimers.forEach(t=>clearTimeout(t)); reminderTimers=[]; }
+  function enableReminders(schedule){
+    clearReminders();
+    if(!('Notification' in window)){ alert("This browser doesn't support notifications — the schedule above still works as a visual reminder."); return; }
+    if(Notification.permission==='default'){ Notification.requestPermission().then(p=>{ if(p==='granted') scheduleTimers(schedule); }); }
+    else if(Notification.permission==='granted'){ scheduleTimers(schedule); }
+    else { alert('Notifications are blocked for this site — enable them in your browser settings if you want alerts. The schedule above still works visually.'); }
+  }
+  function scheduleTimers(schedule){
+    const now = new Date();
+    schedule.filter(s=>s.l.startsWith('Meal')).forEach(s=>{
+      const timeMatch = s.t.match(/(\d+):(\d+) (AM|PM)/);
+      if(!timeMatch) return;
+      let hh = parseInt(timeMatch[1])%12; if(timeMatch[3]==='PM') hh+=12;
+      const mm = parseInt(timeMatch[2]);
+      const target = new Date(now); target.setHours(hh, mm, 0, 0);
+      const ms = target - now;
+      if(ms>0){ reminderTimers.push(setTimeout(()=>{ try{ new Notification('Ledger', {body: s.l+' — time to eat.'}); }catch(e){} }, ms)); }
+    });
+  }
+
+  // ---------- Weight ----------
+  $('weightDate').value = todayStr(new Date());
+  $('addWeight').onclick = ()=>{
+    const date = $('weightDate').value, val = parseFloat($('weightVal').value);
+    if(!date || !val){ alert('Enter a date and weight.'); return; }
+    let weights = loadWeights(); weights = weights.filter(w=>w.date!==date);
+    weights.push({date, kg:val}); weights.sort((a,b)=>a.date.localeCompare(b.date));
+    saveWeights(weights); $('weightVal').value=''; renderWeight();
+  };
+  function renderWeight(){
+    const weights = loadWeights(); const START=117, TARGET=80;
+    const latest = weights.length ? weights[weights.length-1].kg : START;
+    $('wCurrent').textContent = latest.toFixed(1);
+    $('wLost').textContent = Math.max(0, START-latest).toFixed(1);
+    $('wToGo').textContent = Math.max(0, latest-TARGET).toFixed(1);
+    const svg = $('weightChart'); svg.innerHTML='';
+    const W=600,H=180,PAD=30;
+    const points = weights.length ? weights : [{date:todayStr(new Date()), kg:START}];
+    const minY = Math.min(TARGET, ...points.map(p=>p.kg)) - 2, maxY = Math.max(START, ...points.map(p=>p.kg)) + 2;
+    const xFor = i => PAD + (points.length<=1?0:(i/(points.length-1))*(W-2*PAD));
+    const yFor = v => H-PAD - ((v-minY)/(maxY-minY))*(H-2*PAD);
+    const ty = yFor(TARGET);
+    svg.insertAdjacentHTML('beforeend', `<line x1="${PAD}" y1="${ty}" x2="${W-PAD}" y2="${ty}" stroke="#3F7D53" stroke-width="1.5" stroke-dasharray="4,4"/>`);
+    svg.insertAdjacentHTML('beforeend', `<text x="${W-PAD}" y="${ty-6}" text-anchor="end" font-size="10" fill="#3F7D53" font-family="Space Mono">target 80kg</text>`);
+    let path = ''; points.forEach((p,i)=>{ const x=xFor(i), y=yFor(p.kg); path += (i===0?'M':'L')+x+','+y+' '; });
+    svg.insertAdjacentHTML('beforeend', `<path d="${path}" fill="none" stroke="#1E5F74" stroke-width="2.5"/>`);
+    points.forEach((p,i)=>{ const x=xFor(i), y=yFor(p.kg); svg.insertAdjacentHTML('beforeend', `<circle cx="${x}" cy="${y}" r="3.5" fill="#1E5F74"/>`); });
+  }
+
+  // ---------- Recipes ----------
+  function renderRecipes(){
+    $('recipeBox').innerHTML = RECIPES.map(r=>`<div class="recipe"><h4>${r.name}</h4><p>${r.desc}</p><div class="rmacros">${r.macros}</div></div>`).join('');
+  }
+
+  // ---------- Guidance ----------
+  function computeGuidance(totals, targets, exerciseKcal){
+    const hour = new Date().getHours();
+    const budget = targets.targetCal + (settings.addExercise ? exerciseKcal : 0);
+    const remaining = budget - totals.kcal;
+    const msgs = [];
+    if(totals.kcal > budget){ msgs.push({type:'alert', text:"You've gone over today's calorie budget. No extra snacking — just get back on track with your next meal or tomorrow."}); }
+    else if(remaining < 250 && hour < 21){ msgs.push({type:'caution', text:`Only ~${remaining} kcal left today. Prioritize protein and vegetables — skip extra rice, bread, or nuts for the rest of the day.`}); }
+    if(targets.targetC>0 && totals.c > targets.targetC*0.9 && totals.c <= targets.targetC){ msgs.push({type:'caution', text:"You're close to today's carb budget. Lean on chicken, paneer, or extra veggies for your next meal instead of rice/chapati."}); }
+    else if(targets.targetC>0 && totals.c > targets.targetC){ msgs.push({type:'caution', text:"You're over your carb target for today. No hard reset needed — just keep the rest of today's meals carb-light."}); }
+    if(hour>=20 && totals.p > targets.targetP*0.85){ msgs.push({type:'caution', text:"High protein intake this late can spike purines. Given your elevated uric acid, keep your last meal lighter on meat — curd, paneer, or veggies are gentler."}); }
+    if(totals.p >= targets.targetP){ msgs.push({type:'good', text:"Protein target hit for today — that helps preserve muscle while you cut."}); }
+    if(msgs.length===0){ msgs.push({type:'good', text:"Tracking well within budget. Stay on your 3.5L+ water and aim for 7h30m+ sleep tonight."}); }
+    return msgs;
+  }
+
+  // ---------- Dashboard refresh ----------
+  function refreshDashboard(){
+    const key = todayStr(currentDate); const day = loadDay(key);
+    const totals = day.meals.reduce((a,m)=>({kcal:a.kcal+m.kcal,p:a.p+m.p,c:a.c+m.c,f:a.f+m.f}), {kcal:0,p:0,c:0,f:0});
+    const exerciseKcal = day.activities.reduce((a,x)=>a+x.kcal,0);
+
+    $('calEaten').textContent = totals.kcal;
+    const budget = settings.targetCal + (settings.addExercise ? exerciseKcal : 0);
+    $('calTargetLabel').textContent = `/ ${budget} target`;
+    const remaining = budget - totals.kcal;
+    $('calRemaining').innerHTML = remaining>=0 ? `<b>${remaining}</b> kcal remaining` : `<b>${Math.abs(remaining)}</b> kcal over budget`;
+
+    $('pVal').textContent = totals.p; $('cVal').textContent = totals.c; $('fVal').textContent = totals.f;
+    $('pFill').style.width = Math.min(100, (totals.p/settings.targetP)*100)+'%';
+    $('cFill').style.width = Math.min(100, (totals.c/settings.targetC)*100)+'%';
+    $('fFill').style.width = Math.min(100, (totals.f/settings.targetF)*100)+'%';
+    $('burnLabel').textContent = exerciseKcal>0 ? `· ~${exerciseKcal} kcal burned today` : '';
+
+    const targets = {targetCal:settings.targetCal, targetP:settings.targetP, targetC:settings.targetC, targetF:settings.targetF};
+    $('guidanceBox').innerHTML = computeGuidance(totals, targets, exerciseKcal).map(g=>`<div class="guide ${g.type}"><div class="dot"></div><div>${g.text}</div></div>`).join('');
+
+    if(day.meals.length===0){ $('mealLog').innerHTML = '<div class="empty">Nothing logged yet today.</div>'; }
+    else {
+      $('mealLog').innerHTML = day.meals.map(m=>`<div class="logitem"><div class="name">${m.name}</div><div class="macros">${m.kcal}kcal · P${m.p} C${m.c} F${m.f}</div><button class="del" data-del="${m.id}">✕</button></div>`).join('');
+      $('mealLog').querySelectorAll('[data-del]').forEach(b=> b.onclick = ()=> deleteMeal(parseFloat(b.dataset.del)));
+    }
+    if(day.activities.length===0){ $('activityLog').innerHTML = '<div class="empty">No activity logged today.</div>'; }
+    else {
+      $('activityLog').innerHTML = day.activities.map(a=>`<div class="logitem"><div class="name">${a.label}</div><div class="macros">~${a.kcal} kcal</div><button class="del" data-adel="${a.id}">✕</button></div>`).join('');
+      $('activityLog').querySelectorAll('[data-adel]').forEach(b=> b.onclick = ()=> deleteActivity(parseFloat(b.dataset.adel)));
+    }
+    renderSleepSnapshot();
+  }
+
+  // ---------- Settings panel ----------
+  function loadSettingsToForm(){
+    $('tCal').value = settings.targetCal; $('tP').value = settings.targetP; $('tC').value = settings.targetC; $('tF').value = settings.targetF;
+    $('addExerciseToggle').checked = settings.addExercise;
+  }
+  $('saveTargets').onclick = ()=>{
+    settings.targetCal = parseFloat($('tCal').value)||settings.targetCal;
+    settings.targetP = parseFloat($('tP').value)||settings.targetP;
+    settings.targetC = parseFloat($('tC').value)||settings.targetC;
+    settings.targetF = parseFloat($('tF').value)||settings.targetF;
+    settings.addExercise = $('addExerciseToggle').checked;
+    saveSettings(settings); refreshDashboard();
+  };
+  $('addExerciseToggle').onchange = ()=>{ settings.addExercise = $('addExerciseToggle').checked; saveSettings(settings); refreshDashboard(); };
+
+  // ---------- History ----------
+  function getAllDayKeys(){
+    const keys = [];
+    for(let i=0;i<localStorage.length;i++){ const k = localStorage.key(i); if(k.startsWith('ledger_day_')) keys.push(k.replace('ledger_day_','')); }
+    return keys.sort();
+  }
+  function renderHistory(){
+    const range = parseInt($('rangeSelect').value);
+    const today = new Date(); today.setHours(0,0,0,0);
+    const cutoff = new Date(today); cutoff.setDate(cutoff.getDate()-range);
+    const weights = loadWeights();
+    const allKeys = getAllDayKeys().filter(k=>{ const d = new Date(k); return d>=cutoff && d<=today; }).sort().reverse();
+
+    // table
+    let rows = '';
+    allKeys.forEach(dateKey=>{
+      const day = loadDay(dateKey);
+      if(day.meals.length===0 && day.activities.length===0 && !day.sleep) return;
+      const totals = day.meals.reduce((a,m)=>({kcal:a.kcal+m.kcal,p:a.p+m.p,c:a.c+m.c,f:a.f+m.f}), {kcal:0,p:0,c:0,f:0});
+      const burn = day.activities.reduce((a,x)=>a+x.kcal,0);
+      const sleepStr = day.sleep && day.sleep.hours!==null ? day.sleep.hours+'h' : '—';
+      const wEntry = weights.find(w=>w.date===dateKey);
+      const wStr = wEntry ? wEntry.kg.toFixed(1) : '—';
+      rows += `<tr><td>${dateKey.slice(5)}</td><td>${totals.kcal}</td><td>${totals.p}</td><td>${totals.c}</td><td>${totals.f}</td><td>${burn}</td><td>${sleepStr}</td><td>${wStr}</td></tr>`;
+    });
+    $('historyBody').innerHTML = rows || '<tr><td colspan="8" style="font-family:Inter;font-style:italic;color:var(--ink-soft);">No days logged in this range yet.</td></tr>';
+
+    // summary
+    const loggedDays = allKeys.filter(k=>{ const d=loadDay(k); return d.meals.length>0; });
+    let avgKcal=0, avgP=0, avgC=0, avgF=0, overBudgetDays=0, sleepDays=[], swimCount=0, otherWorkoutCount=0;
+    loggedDays.forEach(k=>{
+      const day = loadDay(k);
+      const totals = day.meals.reduce((a,m)=>({kcal:a.kcal+m.kcal,p:a.p+m.p,c:a.c+m.c,f:a.f+m.f}), {kcal:0,p:0,c:0,f:0});
+      avgKcal+=totals.kcal; avgP+=totals.p; avgC+=totals.c; avgF+=totals.f;
+      if(totals.kcal > settings.targetCal) overBudgetDays++;
+      if(day.sleep && day.sleep.hours!==null) sleepDays.push(day.sleep.hours);
+      day.activities.forEach(a=>{ if(a.label.startsWith('Swim')) swimCount++; else otherWorkoutCount++; });
+    });
+    const n = loggedDays.length || 1;
+    avgKcal = Math.round(avgKcal/n); avgP = Math.round(avgP/n); avgC = Math.round(avgC/n); avgF = Math.round(avgF/n);
+    const avgSleep = sleepDays.length ? (sleepDays.reduce((a,b)=>a+b,0)/sleepDays.length).toFixed(1) : 'n/a';
+    const nightsUnderSleep = sleepDays.filter(h=>h<7.5).length;
+
+    const rangeWeights = weights.filter(w=>{ const d=new Date(w.date); return d>=cutoff && d<=today; });
+    let weightLine = 'No weight logged in this range.';
+    if(rangeWeights.length>=1){
+      const first = rangeWeights[0].kg, last = rangeWeights[rangeWeights.length-1].kg;
+      weightLine = `${first.toFixed(1)}kg -> ${last.toFixed(1)}kg (${(last-first<=0?'':'+')}${(last-first).toFixed(1)}kg over range)`;
+    }
+
+    const rangeLabel = range>=9999 ? 'all time' : `last ${range} days`;
+    const summary =
+`LEDGER SUMMARY (${rangeLabel})
+Days logged: ${loggedDays.length}
+Calories: avg ${avgKcal} / ${settings.targetCal} target (${overBudgetDays} day(s) over budget)
+Protein: avg ${avgP}g / ${settings.targetP}g target
+Carbs: avg ${avgC}g / ${settings.targetC}g target
+Fat: avg ${avgF}g / ${settings.targetF}g target
+Weight: ${weightLine}
+Sleep: avg ${avgSleep}h (target 7.5h), ${nightsUnderSleep} night(s) under target
+Activity: ${swimCount} swim session(s), ${otherWorkoutCount} other workout(s)`;
+    $('summaryOut').value = summary;
+  }
+  $('rangeSelect').onchange = renderHistory;
+  $('copySummary').onclick = ()=>{
+    const text = $('summaryOut').value;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(()=>alert('Summary copied — paste it back to Claude anytime for a review.')).catch(()=>{ $('summaryOut').select(); alert('Copy failed automatically — text is selected, use your keyboard to copy.'); });
+    } else { $('summaryOut').select(); alert('Text is selected — copy it manually.'); }
+  };
+  $('exportCsv').onclick = ()=>{
+    let rows = [['type','date','name','kcal','protein_g','carbs_g','fat_g']];
+    for(let i=0;i<localStorage.length;i++){
+      const k = localStorage.key(i);
+      if(k.startsWith('ledger_day_')){
+        const date = k.replace('ledger_day_',''); const day = JSON.parse(localStorage.getItem(k));
+        (day.meals||[]).forEach(m=> rows.push(['meal',date,m.name,m.kcal,m.p,m.c,m.f]));
+        (day.activities||[]).forEach(a=> rows.push(['activity',date,a.label,a.kcal,'','','']));
+        if(day.sleep) rows.push(['sleep',date,`bed ${day.sleep.bed||''} wake ${day.sleep.wake||''} (${day.sleep.quality||''})`, day.sleep.hours||'', '', '', '']);
+      }
+    }
+    loadWeights().forEach(w=> rows.push(['weight',w.date,'',w.kg,'','','']));
+    const csv = rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
+    const blob = new Blob([csv], {type:'text/csv'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'ledger_export.csv'; a.click();
+  };
+  $('clearDay').onclick = ()=>{ if(!confirm('Clear all food, activity, and sleep logged for this day?')) return; saveDay(todayStr(currentDate), {meals:[], activities:[], sleep:null}); refreshAll(); };
+  $('clearAll').onclick = ()=>{
+    if(!confirm('This clears ALL logged data (every day, weight history, settings). This cannot be undone. Continue?')) return;
+    const keys = []; for(let i=0;i<localStorage.length;i++){ const k = localStorage.key(i); if(k.startsWith('ledger_')) keys.push(k); }
+    keys.forEach(k=>localStorage.removeItem(k));
+    settings = {...DEFAULT_SETTINGS}; saveSettings(settings);
+    refreshAll();
+  };
+
+  // ---------- Init ----------
+  function refreshAll(){ renderDateLabel(); loadSleepToForm(); refreshDashboard(); renderWeight(); }
+  renderMealSlots(); renderRecipes(); loadSettingsToForm(); refreshAll();
+})();
+</script>
+
+
+</body></html>
